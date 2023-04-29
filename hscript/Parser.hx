@@ -185,6 +185,7 @@ class Parser {
 		initParser(origin);
 		input = s;
 		readPos = 0;
+		if (s == null || s.trim() == "") return mk(EBlock([]),0);
 		var a = new Array();
 		while( true ) {
 			var tk = token();
